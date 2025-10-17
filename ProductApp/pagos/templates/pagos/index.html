@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Pagos</title>
+</head>
+<body>
+    <h1>Pagos registrados</h1>
+
+    {% if pagos %}
+        <ul>
+            {% for pago in pagos %}
+                <li>{{ pago.id }} - {{ pago.monto }} - {{ pago.banco }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay pagos registrados.</p>
+    {% endif %}
+</body>
+</html>

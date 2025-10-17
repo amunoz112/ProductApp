@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Pago
 
-# Create your views here.
+def index(request):
+    pagos = Pago.objects.all()
+    return render(request, 'pagos/index.html', {'pagos': pagos})

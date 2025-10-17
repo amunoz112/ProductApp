@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <h1>Pedidos registrados</h1>
+
+    {% if pedidos %}
+        <ul>
+            {% for pedido in pedidos %}
+                <li>{{ pedido.id }} - {{ pedido.nombre }} - {{ pedido.fecha }} - {{ pedido.estado }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay pedidos registrados.</p>
+    {% endif %}
+</body>
+</html>
+x

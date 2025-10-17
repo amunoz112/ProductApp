@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-sxs6q4xi_)-t1op1*jyvjcn+(#+a^9-tsy#$j22d)1hu5l6cy)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'ProductApp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql_psycopg2",
-        'NAME': "provesi" ,
+        'NAME': "provesi-db" ,
         "USER": "amunoz112",
         "PASSWORD": "isis2503",
-        "HOST": 'localhost',
+        "HOST": 'DB_HOST',
         "PORT": "5432"
         
     }
